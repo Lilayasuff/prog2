@@ -5,7 +5,7 @@
         password: 'pep2021',
         fecha: '2003-04-20',
         DNI: 45887934,
-        foto: '' //preguntar porque no me deja agregar//
+        foto: '' 
     },
     productos: [
         { id: 1,
@@ -261,3 +261,5 @@
       },
     ]
  }
+
+ module.exports = base
