@@ -6,7 +6,7 @@ const controller = require('../controllers/usuarioController')
 router.get('/', controller.index)
 router.get('/login', controller.login)
 router.get('/profile_edit', controller.profile_edit)
-
+router.get('/profile', controller.profile)
 
 
 module.exports = router;

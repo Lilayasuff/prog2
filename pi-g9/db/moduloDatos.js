@@ -10,8 +10,8 @@
     productos: [
         { id: 1,
           imagen: "",
-          producto: "Adidas forum mid",
-          descripcion: 'Son una opción icónica que combina estilo y rendimiento. Las Adidas Forum Mid son un ícono del estilo urbano que se remonta a los años 80, cuando fueron lanzadas originalmente como zapatillas de baloncesto de alto rendimiento. Con su diseño de corte medio, las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.',
+          producto: "Adidas Forum Mid",
+          descripcion: 'Las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.',
           comentarios:[
             {
                 id: 1,
@@ -35,8 +35,8 @@
         },
         { id: 2,
           imagen: "",
-          producto: "Adidas campus",
-          descripcion: 'Las Adidas Campus son unas zapatillas clásicas que se han convertido en un icono del estilo urbano desde su lanzamiento en la década de 1980. Con un diseño elegante y atemporal, las Campus destacan por su parte superior de gamuza suave y su silueta baja, que ofrece un ajuste cómodo y versáti',
+          producto: "Adidas Campus",
+          descripcion: 'Destacan por su parte superior de gamuza suave.',
           comentarios:[
             {
                 id: 4,
@@ -60,8 +60,8 @@
          },
         { id: 3,
           imagen: "",
-          producto: "Nike jordan air 1 mid",
-          descripcion: 'Las Nike Jordan Air 1 Mid son una versión del icónico modelo Air Jordan 1 de Nike, diseñadas para ofrecer un equilibrio entre estilo clásico y rendimiento moderno. Con un diseño de corte medio, estas zapatillas brindan un soporte adicional al tobillo, lo que las hace ideales para el uso diario y la práctica del baloncesto. ',
+          producto: "Nike Air Jordan  1 Mid",
+          descripcion: 'Equilibrio entre estilo clásico y rendimiento moderno. ',
           comentarios:[
             {
                 id: 7,
@@ -86,8 +86,8 @@
          },
         { id: 4,
           imagen:'' ,
-          producto: "Blazer nike mid 77",
-          descripcion: 'Las Nike Blazer Mid 77 son una versión retro del clásico modelo Blazer de Nike, que originalmente se lanzó en 1977 como una zapatilla de baloncesto de alto rendimiento. Con un diseño de corte medio, estas zapatillas ofrecen un estilo vintage y un ajuste cómodo que las hace ideales tanto para el uso diario como para actividades deportivas casuales.',
+          producto: "Blazer Nike Mid 77",
+          descripcion: 'Ideales tanto para el uso diario como para actividades deportivas casuales.',
           comentarios:[
             {
                 id: 10,
@@ -111,8 +111,8 @@
         },
         { id: 5,
           imagen: '',
-          producto: "Adidas gazelle",
-          descripcion: 'Las Adidas Gazelle son un clásico del calzado urbano que se lanzó originalmente en 1968 como zapatillas de entrenamiento para fútbol sala. Con un diseño de perfil bajo y una estética retro, las Gazelle son conocidas por su simplicidad y versatilidad. ',
+          producto: "Adidas Gazelle",
+          descripcion: 'Son conocidas por su simplicidad y versatilidad. ',
           comentarios:[
             {
                 id: 13,
@@ -161,7 +161,7 @@
         },
         { id: 7,
           imagen: "",
-          producto: "Adidas forum low",
+          producto: "Adidas Forum Low",
           descripcion: 'Las Adidas Forum Low son unas zapatillas de estilo retro con un diseño de corte bajo. Fabricadas con cuero de alta calidad y detalles icónicos de Adidas, ofrecen un aspecto clásico y versátil',
           comentarios:[
             {
@@ -211,7 +211,7 @@
         },
         { id: 9,
           imagen: "",
-          producto: "Nike dunk low",
+          producto: "Nike Dunk Low",
           descripcion: 'Las Nike Dunk Low son zapatillas de estilo clásico y versátil. Con un diseño de corte bajo, ofrecen un aspecto casual y cómodo para el día a día',
           comentarios:[
             {

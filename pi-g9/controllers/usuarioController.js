@@ -10,6 +10,18 @@ const controller = {
     profile_edit : function (req,res){
         return res.render('profile_edit')
     },
+    profile: function(req,res){
+        const perfil = req.params.profile;
+        const principal = [ ]
+        for (let i = 0; i < 8; i++) {
+            if (base.productos[i]) {
+                 principal.push (base.productos[i])
+            
+        }}
+        res.render('profile', { productos: principal });
+    },
+       
+    
 }
 
 module.exports = controller
