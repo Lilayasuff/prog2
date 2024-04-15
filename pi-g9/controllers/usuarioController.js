@@ -11,21 +11,11 @@ const controller = {
         return res.render('profile_edit')
     },
     profile: function(req,res){
-        const perfil = req.params.profile;
-        const principal = [ ]
-        for (let i = 0; i < 8; i++) {
-            if (base.productos[i]) {
-                 principal.push (base.productos[i])
-            
-        }}
-        res.render('profile', { productos: principal });
+        res.render('profile', { productos: base.productos , usuarios: base.usuarios});
     },
     product_add: function (req, res) {
         return res.render (`product_add`)
-    },
-    register: function (req, res){
-        return res.render(`register`)
-    },
+    } 
     
 }
 
