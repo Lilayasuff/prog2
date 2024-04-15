@@ -20,7 +20,9 @@ const controller = {
         }}
         res.render('profile', { productos: principal });
     },
-       
+    product_add: function (req, res) {
+        return res.render (`product_add`)
+    } 
     
 }
 
