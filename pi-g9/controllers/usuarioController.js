@@ -22,7 +22,10 @@ const controller = {
     },
     product_add: function (req, res) {
         return res.render (`product_add`)
-    } 
+    },
+    register: function (req, res){
+        return res.render(`register`)
+    },
     
 }
 
