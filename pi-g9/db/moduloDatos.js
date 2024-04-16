@@ -5,7 +5,7 @@
         password: '333214',
         fecha: '2024-04-15',
         DNI: 44366452,
-        foto: './images/users/default-image.png' 
+        foto: '/images/users/fotovago1.webp' 
     },
     productos: [
         { id: 1,
@@ -16,19 +16,19 @@
             {
                 id: 1,
                 nombreusuario:'fedefajre@gmail.com',
-                imagen: '',
+                imagen: '/images/users/fotovago1.webp',
                 descripcion: "Las Adidas Forum Mid son increíbles! El diseño clásico y el ajuste cómodo las convierten en mis zapatillas favoritas. Además, la calidad de construcción es excelente. ¡Sin duda, una excelente opción para aquellos que buscan estilo y funcionalidad!",
             },
             {
               id: 2,
               nombreusuario: "lilayassuff@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotomina.jpg',
               descripcion: "Estoy muy impresionado con las Adidas Forum Mid. El estilo retro es exactamente lo que estaba buscando y la durabilidad es impresionante. Después de meses de uso, todavía lucen como nuevas. ¡Recomendaría estas zapatillas a cualquier persona que busque un calzado confiable y elegante!",
             },
             {
               id: 3,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "¡Son un clásico que nunca pasa de moda y definitivamente son una excelente inversión para cualquier amante del calzado urbano!",
              }
           ]
@@ -41,19 +41,19 @@
             {
                 id: 4,
                 nombreusuario: "pepepedro@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotovago3.jpg',
                 descripcion: "Las Adidas Campus son perfectas para el uso diario!",
             },
             {
               id: 5,
               nombreusuario: "ernestojuan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago4.jpeg',
               descripcion: "Me encanta el aspecto de las Adidas Campus, pero la suela es un poco rígida y tardó un tiempo en ablandarse.",
             },
             {
               id: 6,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "¡Las recomendaría a cualquiera que busque zapatillas versátiles y elegantes!",
              }
           ]
@@ -66,19 +66,19 @@
             {
                 id: 7,
                 nombreusuario: 'fedefajre@gmail.com',
-                imagen: '',
+                imagen: '/images/users/fotovago1.webp',
                 descripcion: "¡Estoy enamorado de mis Air Jordan 1 Mid! Son increíblemente cómodas y el estilo clásico es simplemente imbatible",
             },
             {
               id: 8,
               nombreusuario: "lilayassuff@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotomina.jpg',
               descripcion: "¡Definitivamente recomendaría estas zapatillas a cualquier amante del calzado urbano!",
             },
             {
               id: 9,
               nombreusuario: "pepepedro@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago3.jpg',
               descripcion: "Me decepcionaron un poco las Air Jordan 1 Mid.",
               
              }
@@ -92,19 +92,19 @@
             {
                 id: 10,
                 nombreusuario: "lilayassuff@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotomina.jpg',
                 descripcion: "Las Nike Blazer Mid '77 son impresionantes. La calidad del cuero es excepcional y el estilo retro es inigualable.",
             },
             {
               id: 11,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "Son perfectas para cualquier ocasión y siempre recibo elogios cuando las uso!",
             },
             {
               id: 12,
               nombreusuario: "pepepedro@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago3.jpg',
               descripcion: "El ajuste era un poco estrecho en el antepié y la amortiguación no era tan suave como esperaba. No son ideales para largas caminatas.",
              }
           ]
@@ -117,19 +117,19 @@
             {
                 id: 13,
                 nombreusuario: "lilayassuff@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotomina.jpg',
                 descripcion: "Las Adidas Gazelle son increíbles. Son cómodas, elegantes y tienen un estilo retro que me encanta",
             },
             {
               id: 14,
               nombreusuario: 'fedefajre@gmail.com',
-              imagen: '',
+              imagen: '/images/users/fotovago1.webp',
               descripcion: "Desafortunadamente, las Adidas Gazelle no cumplieron mis expectativas. La calidad del material no era tan alta como esperaba y la suela se desgastó rápidamente.",
             },
             {
               id: 15,
               nombreusuario: "pepepedro@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago3.jpg',
               descripcion: "Son perfectas para combinar con cualquier atuendo y siempre reciben elogios!",
              }
           ]
@@ -142,19 +142,19 @@
             {
                 id: 16,
                 nombreusuario: "lilayassuff@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotomina.jpg',
                 descripcion: "Las Air Jordan 1 Low son increíbles. El estilo icónico de las Air Jordan 1 en un diseño de corte bajo es simplemente perfecto.",
             },
             {
               id: 17,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "Son cómodas, elegantes y se adaptan a cualquier ocasión. Definitivamente, una excelente elección para cualquier amante del calzado deportivo",
             },
             {
               id: 18,
               nombreusuario: "ernestojuan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago4.jpeg',
               descripcion: "Estoy muy contento con mis Air Jordan 1 Low. El cuero es de alta calidad y el ajuste es perfecto. Además, la amortiguación en la entresuela proporciona una sensación de suavidad en cada paso. ¡Sin duda, las recomendaría a cualquiera que busque un estilo atemporal y una comodidad excepcional!",
              }
           ]
@@ -167,19 +167,19 @@
             {
                 id: 19,
                 nombreusuario: "pepepedro@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotovago3.jpg',
                 descripcion: "Estoy muy contento con mis Adidas Forum Low. El ajuste es perfecto y el estilo retro siempre recibe elogios. Además, la durabilidad es impresionante. Después de meses de uso, todavía lucen como nuevas. ¡Sin duda, las recomendaría a cualquiera que busque un calzado clásico y confiable!",
             },
             {
               id: 20,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "El diseño clásico es perfecto para cualquier ocasión y la calidad de construcción es excepcional.",
             },
             {
               id: 21,
               nombreusuario: 'fedefajre@gmail.com',
-              imagen: '',
+              imagen: '/images/users/fotovago1.webp',
               descripcion: "Son cómodas desde el primer momento y la suela de goma proporciona una tracción increíble. Definitivamente, una de mis zapatillas favoritas",
              }
           ]
@@ -192,19 +192,19 @@
             {
                 id: 22,
                 nombreusuario: "pepepedro@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotovago3.jpg',
                 descripcion: " La calidad de construcción es excepcional y el estilo retro es exactamente lo que estaba buscando. Son cómodas desde el primer momento y se adaptan perfectamente a mi pie. Definitivamente, una excelente elección para cualquier ocasión",
             },
             {
               id: 23,
               nombreusuario: "lilayassuff@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotomina.jpg',
               descripcion: "No puedo decir que esté completamente satisfecho con las New Balance 550. Aunque inicialmente me encantó el diseño, encontré que la comodidad era un problema. Después de un tiempo de uso, comenzaron a causarme molestias en la planta del pie y en el talón",
             },
             {
               id: 24,
               nombreusuario: 'fedefajre@gmail.com',
-              imagen: '',
+              imagen: '/images/users/fotovago1.webp',
               descripcion: "El diseño clásico es atemporal y la combinación de colores es perfecta. Además, la amortiguación en la entresuela proporciona una sensación de suavidad en cada paso",
              }
           ]
@@ -217,19 +217,19 @@
             {
                 id: 25,
                 nombreusuario: "lilayassuff@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotomina.jpg',
                 descripcion: "Las Nike Dunk Low son asombrosas! Tienen un estilo versátil que se adapta a cualquier situación y la comodidad es excepcional",
             },
             {
               id: 26,
               nombreusuario: "pepepedro@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago3.jpg',
               descripcion: "¡Definitivamente son mis zapatillas favoritas en este momento!",
             },
             {
               id: 27,
               nombreusuario:'fedefajre@gmail.com',
-              imagen: '',
+              imagen: '/images/users/fotovago1.webp',
               descripcion: "Son súper versátiles y el ajuste es perfecto. ¡Me encanta la sensación de calidad en cada paso y cómo complementan cualquier atuendo!",
              }
           ]
@@ -242,19 +242,19 @@
             {
                 id: 28,
                 nombreusuario: "ernestojuan@gmail.com",
-                imagen: '',
+                imagen: '/images/users/fotovago4.jpeg',
                 descripcion: "¡Las Air Jordan Legacy 312 Low son una obra maestra! El diseño que combina elementos de diferentes modelos icónicos de Jordan es simplemente brillante. ",
             },
             {
               id: 29,
               nombreusuario: "matelavan@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotovago2.jpg',
               descripcion: "No puedo decir que esté completamente satisfecho con las Air Jordan Legacy 312 Low. Aunque el estilo es genial, encontré que la calidad del material no era tan alta como esperaba. ",
             },
             {
               id: 30,
               nombreusuario: "lilayassuff@gmail.com",
-              imagen: '',
+              imagen: '/images/users/fotomina.jpg',
               descripcion: "Son sin duda mis zapatillas favoritas!",
              }
           ]
