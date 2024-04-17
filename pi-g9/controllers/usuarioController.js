@@ -2,7 +2,7 @@ const base = require('../db/moduloDatos')
 
 const controller = {
     index: function (req,res){
-       return res.render('index')
+       return res.render('index', { productos: base.productos , usuarios: base.usuarios});
     },
     login: function (req,res){
         return res.render('login')
