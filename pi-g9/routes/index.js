@@ -12,6 +12,6 @@ router.get('/profile', controller.profile)
 router.get('/product_add', controller.product_add)
 router.get('/register', controller.register)
 router.get('/product', controllerP.product)
-
+router.get('/search_results', controller.search_results)
 
 module.exports = router;

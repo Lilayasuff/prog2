@@ -18,7 +18,10 @@ const controller = {
     },
     register: function (req, res) {
         return res.render ('register')
-    } 
+    },
+    search_results: function(req,res){
+        res.render('search_results', { productos: base.productos })
+    }
     
 }
 
