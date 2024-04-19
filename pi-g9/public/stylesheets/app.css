@@ -154,7 +154,7 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(./images/banner.jpg);
+  background-image: url(./images/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -259,7 +259,7 @@ hr {
 
 /*====== Footer ======*/
 .main-footer {
-  background-color: #ffffff;
+  background-color:  rgba(0, 123, 206, 0.581);
   padding: 20px 0;
   margin-top: 80px;
 }

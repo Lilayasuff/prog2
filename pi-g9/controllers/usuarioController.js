@@ -8,7 +8,7 @@ const controller = {
         return res.render('login')
     },
     profile_edit : function (req,res){
-        return res.render('profile_edit')
+        return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
     },
     profile: function(req,res){
         res.render('profile', { productos: base.productos , usuarios: base.usuarios});
