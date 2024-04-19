@@ -9,52 +9,49 @@
 				<a href="./product_add">Editar</a>
 			</p>
 		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="./images/products/zapatillas new balance 550.avif" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						Las New Balance 550 son zapatillas de estilo retro que combinan una estética clásica con detalles modernos. Confeccionadas con materiales de alta calidad, como cuero y gamuza, las 550 ofrecen durabilidad y estilo.</p>
-				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
-						<article>
-							<img src="default-image.png" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="./profile">Nombre usuario: pepepedro@gmail.com</a> </strong>
-								La calidad de construcción es excepcional y el estilo retro es exactamente lo que estaba buscando. Son cómodas desde el primer momento y se adaptan perfectamente a mi pie. Definitivamente, una excelente elección para cualquier ocasión.</p>
-							</div>
-						</article>
-						<article>
-							<img src="default-image.png" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="./profile">Nombre usuario: lilayassuff@gmail.com</a> </strong>
-									No puedo decir que esté completamente satisfecho con las New Balance 550. Aunque inicialmente me encantó el diseño, encontré que la comodidad era un problema. Después de un tiempo de uso, comenzaron a causarme molestias en la planta del pie y en el talón</p>
-							</div>
-						</article>
-						<article>
-							<img src="default-image.png" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="./profile">Nombre usuario: fedefajre@gmail.com</a> </strong>
-									El diseño clásico es atemporal y la combinación de colores es perfecta. Además, la amortiguación en la entresuela proporciona una sensación de suavidad en cada paso
-									</p>
-							</div>
-						</article>
-					
+		
+		<% for( let i = 0; i < 1; i++ ) { %>
 
-					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
+			<div class="product-detail">
+				<div class="row">
+					<article class="col-12 col-lg-8 product-detail-info">
+						<img src="<%=productos[i].imagen %>" alt="" class="product-detail-img">
+						<p class="product-detail-description">
+							<%=productos[i].descripcion %>
+						</p>
+					</article>
+					
+					<div class="col-12 col-lg-4">
+
+					<% for( let i = 0; i < 3; i++ ) { %>
+							<section class="comments">
+								<article>
+									<img src="default-image.png" alt="">
+									<div class="data">
+										<p class="user">
+										<strong> <a href="./profile">Nombre usuario: <%=productos[0].comentarios[i].nombreusuario %></a> </strong>
+										<%=productos[0].comentarios[i].descripcion %></p>
+									</div>
+								</article>
+							</section>
+							
+					<% } %>
+						
+	
+						
+						<form class="form" action="" method="POST">
+							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+							<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+						</form>
+						<hr>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+			
+			
+		<% } %>
+		
 	<!-- /product detail -->
 
 	<%- include('./partial/footer.ejs') %>
