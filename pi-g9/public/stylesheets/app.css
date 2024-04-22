@@ -204,6 +204,7 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .product-box_data h2 {
@@ -409,6 +410,7 @@ hr {
 }
 .comments {
   padding: 30px 15px 15px 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .comments article{
   margin-bottom: 7.5px;
