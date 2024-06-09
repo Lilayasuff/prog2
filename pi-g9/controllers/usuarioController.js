@@ -1,4 +1,5 @@
 const base = require('../db/moduloDatos')
+const db = require ('../database/models')
 
 const controller = {
     index: function (req,res){
