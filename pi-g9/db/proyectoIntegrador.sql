@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 15, 2024 at 09:11 PM
+-- Generation Time: Jun 10, 2024 at 06:22 PM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -20,9 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `proyectoIntegrador`
 --
-DROP DATABASE IF EXISTS `proyectoIntegrador`;
-CREATE DATABASE IF NOT EXISTS `proyectoIntegrador` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `proyectoIntegrador`;
 
 -- --------------------------------------------------------
 
@@ -33,9 +30,9 @@ USE `proyectoIntegrador`;
 CREATE TABLE `comentarios` (
   `id` int(10) UNSIGNED NOT NULL,
   `descripcion` varchar(1500) DEFAULT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `deletedAt` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   `usuarios_id` int(10) UNSIGNED DEFAULT NULL,
   `productos_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -44,7 +41,7 @@ CREATE TABLE `comentarios` (
 -- Dumping data for table `comentarios`
 --
 
-INSERT INTO `comentarios` (`id`, `descripcion`, `createdAt`, `updatedAt`, `deletedAt`, `usuarios_id`, `productos_id`) VALUES
+INSERT INTO `comentarios` (`id`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuarios_id`, `productos_id`) VALUES
 (1, 'Las Adidas Forum Mid son increíbles! El diseño clásico y el ajuste cómodo las convierten en mis zapatillas favoritas. Además, la calidad de construcción es excelente. ¡Sin duda, una excelente opción para aquellos que buscan estilo y funcionalidad!', '2024-04-15 18:58:53', '2024-04-15 18:58:53', NULL, 1, 1),
 (2, 'Estoy muy impresionado con las Adidas Forum Mid. El estilo retro es exactamente lo que estaba buscando y la durabilidad es impresionante. Después de meses de uso, todavía lucen como nuevas. ¡Recomendaría estas zapatillas a cualquier persona que busque un calzado confiable y elegante!', '2024-04-15 18:59:45', '2024-04-15 18:59:45', NULL, 2, 1),
 (3, '¡Son un clásico que nunca pasa de moda y definitivamente son una excelente inversión para cualquier amante del calzado urbano!', '2024-04-15 19:00:17', '2024-04-15 19:00:17', NULL, 3, 1),
@@ -87,9 +84,9 @@ CREATE TABLE `productos` (
   `imagen` varchar(100) DEFAULT NULL,
   `producto` varchar(100) NOT NULL,
   `descripcion` varchar(1500) DEFAULT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `deletedAt` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   `usuario_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -97,7 +94,7 @@ CREATE TABLE `productos` (
 -- Dumping data for table `productos`
 --
 
-INSERT INTO `productos` (`id`, `imagen`, `producto`, `descripcion`, `createdAt`, `updatedAt`, `deletedAt`, `usuario_id`) VALUES
+INSERT INTO `productos` (`id`, `imagen`, `producto`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuario_id`) VALUES
 (1, 'foto.png', 'Adidas Forum Mid', 'Las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.', '2024-04-15 18:39:20', '2024-04-15 18:55:22', '2024-04-15 18:55:22', 1),
 (2, 'foto.png', 'Adidas Campus', 'Destacan por su parte superior de gamuza suave.', '2024-04-15 18:40:47', '2024-04-15 18:56:12', '2024-04-15 18:56:12', 5),
 (3, 'foto.png', 'Nike Air Jordan 1 Mid', 'Equilibrio entre estilo clásico y rendimiento moderno.', '2024-04-15 19:31:03', '2024-04-15 19:31:03', NULL, 2),
@@ -122,16 +119,16 @@ CREATE TABLE `usuarios` (
   `fecha` date DEFAULT NULL,
   `dni` int(11) DEFAULT NULL,
   `foto` varchar(500) DEFAULT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `deletedAt` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `password`, `fecha`, `dni`, `foto`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+INSERT INTO `usuarios` (`id`, `email`, `password`, `fecha`, `dni`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'fedefajre@gmail.com', '333214', '2024-04-15', 44366452, 'foto.png', '2024-04-15 18:01:41', '2024-04-15 18:01:41', NULL),
 (2, 'lilayassuff@gmail.com', '324314', '2024-04-16', 44334662, 'foto.png', '2024-04-15 18:25:31', '2024-04-15 18:25:31', NULL),
 (3, 'matelavan@gmail.com', '1234', '2024-04-17', 44444123, 'foto.png', '2024-04-15 18:25:44', '2024-04-15 18:25:44', NULL),
