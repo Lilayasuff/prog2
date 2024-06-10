@@ -7,6 +7,7 @@ const session = require("express-session");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const db = require('./database/models');
 
 var app = express();
 
@@ -33,6 +34,22 @@ app.use(function (req, res, next) {
   }
   return next();
 });
+app.use(function(req, res, next){
+  //Solo quiero hacerlo si tengo una coockie
+  if(req.cookies.userId != undefined && req.session.user == undefined){
+    let idDeLaCookie = req.cookies.userId;
+    db.User.findByPk(idDeLaCookie)
+    .then( user => {
+      req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
+      res.locals.user = user; //Se corrije si usamos user.dataValues
+      return next();
+    })
+    .catch( e => {console.log(e)})
+  } else {
+    //Si no tengo cookie quiero que el programa continue
+    return next();
+  }
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
