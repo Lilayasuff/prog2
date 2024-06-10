@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 10, 2024 at 06:22 PM
+-- Generation Time: Jun 10, 2024 at 07:06 PM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -87,14 +87,14 @@ CREATE TABLE `productos` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL,
-  `usuario_id` int(10) UNSIGNED DEFAULT NULL
+  `usuarios_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `productos`
 --
 
-INSERT INTO `productos` (`id`, `imagen`, `producto`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuario_id`) VALUES
+INSERT INTO `productos` (`id`, `imagen`, `producto`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuarios_id`) VALUES
 (1, 'foto.png', 'Adidas Forum Mid', 'Las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.', '2024-04-15 18:39:20', '2024-04-15 18:55:22', '2024-04-15 18:55:22', 1),
 (2, 'foto.png', 'Adidas Campus', 'Destacan por su parte superior de gamuza suave.', '2024-04-15 18:40:47', '2024-04-15 18:56:12', '2024-04-15 18:56:12', 5),
 (3, 'foto.png', 'Nike Air Jordan 1 Mid', 'Equilibrio entre estilo clásico y rendimiento moderno.', '2024-04-15 19:31:03', '2024-04-15 19:31:03', NULL, 2),
@@ -152,7 +152,7 @@ ALTER TABLE `comentarios`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `usuario_id` (`usuario_id`);
+  ADD KEY `usuario_id` (`usuarios_id`);
 
 --
 -- Indexes for table `usuarios`
@@ -197,7 +197,7 @@ ALTER TABLE `comentarios`
 -- Constraints for table `productos`
 --
 ALTER TABLE `productos`
-  ADD CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+  ADD CONSTRAINT `usuario_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
