@@ -3,7 +3,7 @@ const db = require("../database/models")
 const bcrypt = require("bcryptjs")
 
 const validacionLo = [
-    body("email")
+    body("usuario")
         .notEmpty()
         .withMessage("Debes completar con tu email")
         .bail()
@@ -22,11 +22,11 @@ const validacionLo = [
 ),
     body("password")
         .notEmpty()
-        .withMessage("Debes introducir una contraseña")
+        .withMessage("Debes introducir tu contraseña")
         .bail()
         .custom(function(value, {req}){
             return db.Users.findOne({
-                where: {password:req.body.password}
+                where: {email:req.body.usuario}
             })
             .then(function(user){
                 if(user){

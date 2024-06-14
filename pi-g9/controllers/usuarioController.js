@@ -25,25 +25,25 @@ const controller = {
                     errors: validacionMal.mapped(),
                     oldData:req.body
             })
-        } 
+            } 
         // Buscamos el usuario que se quiere loguear.
             db.Users.findOne({
-                where: [{email: req.body.email}]
-        })
+                where: [{email: req.body.usuario}]
+            })
             .then( function ( user ) {
-            //Seteamos la session con la info del usuario
+                //Seteamos la session con la info del usuario
                 req.session.user = user;          
-          
+            
                 if(req.body.rememberme != undefined){
                     res.cookie('userId', user.id, { maxAge: 1000 * 60 * 100})
-            }
-                return res.redirect('/');            
-        })
-            .catch( function(e) {
-                console.log(e)
-        })
-    }},
-   
+                }
+                    return res.redirect('/');            
+            })
+                .catch( function(e) {
+                    console.log(e)
+            })
+        }},
+    
     profile_edit : function (req,res){
         return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
     },
