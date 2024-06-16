@@ -35,13 +35,12 @@ app.use(function (req, res, next) {
   return next();
 });
 app.use(function(req, res, next){
-  //Solo quiero hacerlo si tengo una coockie
   if(req.cookies.userId != undefined && req.session.user == undefined){
     let idDeLaCookie = req.cookies.userId;
-    db.User.findByPk(idDeLaCookie)
+    db.Users.findByPk(idDeLaCookie)
     .then( user => {
-      req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
-      res.locals.user = user; //Se corrije si usamos user.dataValues
+      req.session.user = user; 
+      res.locals.user = user; 
       return next();
     })
     .catch( e => {console.log(e)})

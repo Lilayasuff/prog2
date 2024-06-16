@@ -1,4 +1,8 @@
-<%- include('./partial/header.ejs') %>
+<% if(locals.user){%>
+	<%- include('./partial/headerLogueado') %>
+<% } else { %>
+	<%- include('./partial/header') %>
+<% } %>%>
 
 
 	<!-- Novedades -->
@@ -8,23 +12,35 @@
 				<h2 class="products-title">Resultados de tu búsqueda:</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			
-				<% for( let i = 0; i < 1; i++ ) { %>
+			<% if (!busca) { %>
+				<h2>No buscaste nada </h2>
+			 
+			<% } else if (Products.length == 0) {%>
+				<h2> No encontramos resultados para la busqueda <%= busca %></h2>
+			 
+			<% } else { %>
+				<% for (let i = 0; i < Products.length; i++) { %>
 			
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
-							<a href="./product">
+							<a href="/product/<%= Products[i].id %>">
 								<figure class="product-box_image">
-									<img src="<%=productos[i].imagen %>" alt="Adidas forum mid">
+									<% if (Products[i].imagen == undefined) { %>
+											<img src="/images/products/default-image.png" alt="imagenPre">
+									 
+									<% } else{ %>
+										<img src="/images/products/<%= Products[i].imagen %>" alt="<%= Products[i].producto %>">
+										<% } %>
 								</figure>
 								<article class="product-box_data">
-									<h2><%= productos[i].producto %></h2>
-									<p>Descripcion: <%= productos[i].descripcion %></p>
-									<p>Comentarios: <%= productos[i].comentarios.length%> </p>
+									<h2><%= Products[i].producto %></h2>
+									<p>Descripcion: <%= Products[i].descripcion %></p>
+									<p>Usuario: <a href="/profile/<%= Products[i].Users.id %>"><%= Products[i].Users.email %></a></p>
 								</article>
 							</a>
 						</section>
 					</div>
+				<% } %>
 				<% } %>
 			
 

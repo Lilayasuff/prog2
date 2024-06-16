@@ -12,9 +12,9 @@
 			<form action="/login" method="POST", novalidate>
 					<label for="email"> Email: </label>
 					<input type="email" id="usuario" name="usuario" required value="<%= locals.oldData && oldData.usuario ? oldData.usuario : null %>">
-					<% if (locals.errors && errors.email) { %>
+					<% if (locals.errors && errors.usuario) { %>
 						<div class="error">
-							<%= errors.email.msg %>                                
+							<%= errors.usuario.msg %>                                
 						</div>                            
 					<% } %>     
 					<br>
@@ -29,7 +29,7 @@
 					<br>
 					<br>
 					<label for="recordarme">Recordarme</label>
-					<input type="checkbox" name="recordarme" >
+					<input type="checkbox" id="recordarme" name="recordarme", value="ok" >
 					
 					<button type="submit" class="btn mt-3 ml-4" >INGRESAR</button>
 				</form> 

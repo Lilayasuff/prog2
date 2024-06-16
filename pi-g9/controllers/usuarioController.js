@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const base = require('../db/moduloDatos');
 const db = require ('../database/models');
 const { validationResult } = require("express-validator");
-const op = db.Sequelize.Op;
+const Op = db.Sequelize.Op;
 
 
 
@@ -13,7 +13,11 @@ const controller = {
     login: {
 
         limpio: function (req, res) {
-            return res.render ('login')         
+            if(req.session.user != undefined){
+                return res.redirect("/")
+            } else{
+                return res.render ('login')      
+            } 
     },
         info: function (req,res){
 
@@ -31,18 +35,18 @@ const controller = {
                 where: [{email: req.body.usuario}]
             })
             .then( function ( user ) {
-                //Seteamos la session con la info del usuario
+               
                 req.session.user = user;          
             
-                if(req.body.rememberme != undefined){
-                    res.cookie('userId', user.id, { maxAge: 1000 * 60 * 100})
-                }
-                    return res.redirect('/');            
-            })
-                .catch( function(e) {
-                    console.log(e)
-            })
-        }},
+                    if(req.body.recordarme != undefined){
+                        res.cookie('userId', user.id, { maxAge: 1000 * 60 * 100})
+                    }
+                        return res.redirect('/');            
+                })
+                    .catch( function(e) {
+                        console.log(e)
+                })
+            }},
     
     profile_edit : function (req,res){
         return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
@@ -55,7 +59,11 @@ const controller = {
     },
     register: {
         limpio: function (req, res) {
-            return res.render ('register')         
+            if(req.session.user != undefined){
+                return res.redirect("/")
+            } else{
+                return res.render ('register')      
+            }         
         },
         info: function (req, res) {
             const validacionMal = validationResult(req);
@@ -69,6 +77,7 @@ const controller = {
         }
         const user = {
             email: req.body.email,
+            name: req.body.name,
             password: bcrypt.hashSync(req.body.password), 
             fecha: req.body.fecha,
             dni: req.body.dni,
@@ -85,10 +94,15 @@ const controller = {
             });
 
     }},
-    search_results: function(req,res){
-        res.render('search_results', { productos: base.productos })
-    }
-    
-}
+        logout: function (req, res) {
+           
+            req.session.destroy();
+            res.clearCookie("userId");
+            res.redirect("/");
+        },
+        };
+        
+
 
 module.exports = controller
+

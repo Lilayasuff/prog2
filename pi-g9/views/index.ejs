@@ -1,6 +1,11 @@
+<% if(locals.user){%>
+	<%- include('./partial/headerLogueado') %>
+	<h2 class="text-center">Hola <%= locals.user.name %></h2>
+<% } else { %>
+	<%- include('./partial/header') %>
+<% } %>%>
 
-<%- include('./partial/header.ejs') %>
-	
+
 	<!-- Banner -->
 	<div class="banner">
 		<img src="images/banner2.png" alt="Banner de ofertas">

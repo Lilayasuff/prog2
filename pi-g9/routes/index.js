@@ -8,6 +8,7 @@ const validacionRe = require('../middlewares/register-validator')
 
 /* GET home page. */
 router.get('/', controller.index);
+router.post('/logout', controller.logout)
 
 router.get('/login', controller.login.limpio);
 router.post('/login',validacionLo, controller.login.info);
@@ -20,7 +21,9 @@ router.get('/register', controller.register.limpio);
 router.post('/register', validacionRe, controller.register.info);
 
 router.get('/product', controllerP.product);
-router.get('/search_results', controller.search_results);
+
+router.get('/search_results', controllerP.search_results);
+
 
 
 

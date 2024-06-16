@@ -52,11 +52,11 @@
 	
 				<ul class="right-navbar">
 					<li><a href="/profile">
-							<%= usuarios.email %> <i class="fas fa-user"></i>
+							<%= locals.user.email %> <i class="fas fa-user"></i>
 						</a>
 					</li>
 					<li>
-						<form action="/" method="GET">
+						<form action="/logout" method="POST">
 							<button class="logout" type="submit">
 								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 							</button>

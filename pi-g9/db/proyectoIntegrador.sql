@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Jun 10, 2024 at 07:06 PM
--- Server version: 5.7.39
--- PHP Version: 7.4.33
+-- Servidor: localhost:8889
+-- Tiempo de generación: 15-06-2024 a las 20:48:47
+-- Versión del servidor: 5.7.39
+-- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `proyectoIntegrador`
+-- Base de datos: `proyectoIntegrador`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comentarios`
+-- Estructura de tabla para la tabla `comentarios`
 --
 
 CREATE TABLE `comentarios` (
@@ -38,7 +38,7 @@ CREATE TABLE `comentarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `comentarios`
+-- Volcado de datos para la tabla `comentarios`
 --
 
 INSERT INTO `comentarios` (`id`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuarios_id`, `productos_id`) VALUES
@@ -76,7 +76,7 @@ INSERT INTO `comentarios` (`id`, `descripcion`, `created_at`, `updated_at`, `del
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
@@ -91,25 +91,25 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `productos`
+-- Volcado de datos para la tabla `productos`
 --
 
 INSERT INTO `productos` (`id`, `imagen`, `producto`, `descripcion`, `created_at`, `updated_at`, `deleted_at`, `usuarios_id`) VALUES
-(1, 'foto.png', 'Adidas Forum Mid', 'Las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.', '2024-04-15 18:39:20', '2024-04-15 18:55:22', '2024-04-15 18:55:22', 1),
-(2, 'foto.png', 'Adidas Campus', 'Destacan por su parte superior de gamuza suave.', '2024-04-15 18:40:47', '2024-04-15 18:56:12', '2024-04-15 18:56:12', 5),
-(3, 'foto.png', 'Nike Air Jordan 1 Mid', 'Equilibrio entre estilo clásico y rendimiento moderno.', '2024-04-15 19:31:03', '2024-04-15 19:31:03', NULL, 2),
-(4, 'foto.png', 'Blazer Nike Mid 77', 'Ideales tanto para el uso diario como para actividades deportivas casuales.', '2024-04-15 19:33:27', '2024-04-15 19:33:27', NULL, 4),
-(5, 'foto.png', 'Adidas Gazelle', 'Son conocidas por su simplicidad y versatilidad.', '2024-04-15 19:33:56', '2024-04-15 19:33:56', NULL, 3),
-(6, 'foto.png', 'Air Jordan 1 Low', 'Las Air Jordan 1 Low ofrecen un estilo retro y una versatilidad que las convierten en una opción imprescindible para cualquier aficionado al calzado urbano y a la moda deportiva.', '2024-04-15 19:34:40', '2024-04-15 19:34:40', NULL, 3),
-(7, 'foto.png', 'Adidas Forum Low', 'Las Adidas Forum Low son unas zapatillas de estilo retro con un diseño de corte bajo. Fabricadas con cuero de alta calidad y detalles icónicos de Adidas, ofrecen un aspecto clásico y versátil\'', '2024-04-15 19:35:24', '2024-04-15 19:35:24', NULL, 5),
-(8, 'foto.png', 'New Balance 550', 'Las New Balance 550 son zapatillas de estilo retro que combinan una estética clásica con detalles modernos. Confeccionadas con materiales de alta calidad, como cuero y gamuza, las 550 ofrecen durabilidad y estilo.', '2024-04-15 19:36:22', '2024-04-15 19:36:22', NULL, 2),
-(9, 'foto.png', 'Nike Dunk Low', 'Las Nike Dunk Low son zapatillas de estilo clásico y versátil. Con un diseño de corte bajo, ofrecen un aspecto casual y cómodo para el día a día', '2024-04-15 19:36:55', '2024-04-15 19:36:55', NULL, 1),
-(10, 'foto.png', 'Air Jordan Legacy 312 Low', 'Estas zapatillas combinan elementos de varios modelos clásicos de Nike y Jordan para crear un diseño único y llamativo.', '2024-04-15 19:37:47', '2024-04-15 19:37:47', NULL, 4);
+(1, 'AdidasForumMid.jpg', 'Adidas Forum Mid', 'Las Forum Mid ofrecen un excelente soporte al tobillo, lo que las hace ideales para el uso diario y para actividades deportivas.', '2024-04-15 18:39:20', '2024-04-15 18:55:22', '2024-04-15 18:55:22', 1),
+(2, 'AdidasCampus.jpg', 'Adidas Campus', 'Destacan por su parte superior de gamuza suave.', '2024-04-15 18:40:47', '2024-04-15 18:56:12', '2024-04-15 18:56:12', 5),
+(3, 'airJordanMid.png', 'Nike Air Jordan 1 Mid', 'Equilibrio entre estilo clásico y rendimiento moderno.', '2024-04-15 19:31:03', '2024-04-15 19:31:03', NULL, 2),
+(4, 'nikeBlazerMid.jpg', 'Blazer Nike Mid 77', 'Ideales tanto para el uso diario como para actividades deportivas casuales.', '2024-04-15 19:33:27', '2024-04-15 19:33:27', NULL, 4),
+(5, 'adidasGazelle.jpg', 'Adidas Gazelle', 'Son conocidas por su simplicidad y versatilidad.', '2024-04-15 19:33:56', '2024-04-15 19:33:56', NULL, 3),
+(6, 'AirJordanLow.jpg', 'Air Jordan 1 Low', 'Las Air Jordan 1 Low ofrecen un estilo retro y una versatilidad que las convierten en una opción imprescindible para cualquier aficionado al calzado urbano y a la moda deportiva.', '2024-04-15 19:34:40', '2024-04-15 19:34:40', NULL, 3),
+(7, 'adidasForumLow.jpg', 'Adidas Forum Low', 'Las Adidas Forum Low son unas zapatillas de estilo retro con un diseño de corte bajo. Fabricadas con cuero de alta calidad y detalles icónicos de Adidas, ofrecen un aspecto clásico y versátil\'', '2024-04-15 19:35:24', '2024-04-15 19:35:24', NULL, 5),
+(8, 'NewBalance550.jpg', 'New Balance 550', 'Las New Balance 550 son zapatillas de estilo retro que combinan una estética clásica con detalles modernos. Confeccionadas con materiales de alta calidad, como cuero y gamuza, las 550 ofrecen durabilidad y estilo.', '2024-04-15 19:36:22', '2024-04-15 19:36:22', NULL, 2),
+(9, 'dunkLow.jpg', 'Nike Dunk Low', 'Las Nike Dunk Low son zapatillas de estilo clásico y versátil. Con un diseño de corte bajo, ofrecen un aspecto casual y cómodo para el día a día', '2024-04-15 19:36:55', '2024-04-15 19:36:55', NULL, 1),
+(10, 'AirJordanLegacy.jpg', 'Air Jordan Legacy', 'Estas zapatillas combinan elementos de varios modelos clásicos de Nike y Jordan para crear un diseño único y llamativo.', '2024-04-15 19:37:47', '2024-04-15 19:37:47', NULL, 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -121,26 +121,28 @@ CREATE TABLE `usuarios` (
   `foto` varchar(500) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deleted_at` timestamp NULL DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `password`, `fecha`, `dni`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'fedefajre@gmail.com', '333214', '2024-04-15', 44366452, 'foto.png', '2024-04-15 18:01:41', '2024-04-15 18:01:41', NULL),
-(2, 'lilayassuff@gmail.com', '324314', '2024-04-16', 44334662, 'foto.png', '2024-04-15 18:25:31', '2024-04-15 18:25:31', NULL),
-(3, 'matelavan@gmail.com', '1234', '2024-04-17', 44444123, 'foto.png', '2024-04-15 18:25:44', '2024-04-15 18:25:44', NULL),
-(4, 'pepepedro@gmail.com', '4321', '2024-04-18', 12345678, 'foto.png', '2024-04-15 18:25:53', '2024-04-15 18:25:53', NULL),
-(5, 'ernestojuan@gmail.com', '98765', '2024-04-19', 87654321, 'foto.png', '2024-04-15 18:25:57', '2024-04-15 18:25:57', NULL);
+INSERT INTO `usuarios` (`id`, `email`, `password`, `fecha`, `dni`, `foto`, `created_at`, `updated_at`, `deleted_at`, `name`) VALUES
+(1, 'fedefajre@gmail.com', '333214', '2024-04-15', 44366452, 'fotochico4.jpg', '2024-04-15 18:01:41', '2024-04-15 18:01:41', NULL, ''),
+(2, 'lilayassuff@gmail.com', '324314', '2024-04-16', 44334662, 'fotochica.jpg', '2024-04-15 18:25:31', '2024-04-15 18:25:31', NULL, ''),
+(3, 'matelavan@gmail.com', '1234', '2024-04-17', 44444123, 'fotochico3.jpg', '2024-04-15 18:25:44', '2024-04-15 18:25:44', NULL, ''),
+(4, 'pepepedro@gmail.com', '4321', '2024-04-18', 12345678, 'fotopepe.jpg', '2024-04-15 18:25:53', '2024-04-15 18:25:53', NULL, ''),
+(5, 'ernestojuan@gmail.com', '98765', '2024-04-19', 87654321, 'fotochico2.jpg', '2024-04-15 18:25:57', '2024-04-15 18:25:57', NULL, ''),
+(10, 'may@gmail.com', '$2a$10$Ma6GjQp5ep5ul6aGd010l.Izh6utACj6XGdSrdxXLVosKB6ST/kKO', '1234-02-14', 45668745, 'foto.png', '2024-06-14 15:33:59', '2024-06-14 15:33:59', NULL, '');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `comentarios`
+-- Indices de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`id`),
@@ -148,53 +150,53 @@ ALTER TABLE `comentarios`
   ADD KEY `productos_id` (`productos_id`);
 
 --
--- Indexes for table `productos`
+-- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario_id` (`usuarios_id`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `comentarios`
+-- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT for table `productos`
+-- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `comentarios`
+-- Filtros para la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD CONSTRAINT `productos_id` FOREIGN KEY (`productos_id`) REFERENCES `productos` (`id`),
   ADD CONSTRAINT `usuarios_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Constraints for table `productos`
+-- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `usuario_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);

@@ -1,4 +1,8 @@
-<%- include('./partial/header') %>
+<% if(locals.user){%>
+	<%- include('./partial/headerLogueado') %>
+<% } else { %>
+	<%- include('./partial/header') %>
+<% } %>%>
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
