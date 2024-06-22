@@ -8,8 +8,15 @@ const Op = db.Sequelize.Op;
 
 const controller = {
     index: function (req,res){
-       return res.render('index', { productos: base.productos , usuarios: base.usuarios});
+        db.Products.findAll()
+        .then(function(productos){
+            res.render("index",{Products: productos})
+        })
+        .catch(function(err){
+            console.log(err);
+        })
     },
+    
     login: {
 
         limpio: function (req, res) {
@@ -53,6 +60,7 @@ const controller = {
     },
     profile: function(req,res){
         res.render('profile', { productos: base.productos , usuarios: base.usuarios});
+         
     },
     product_add: function (req, res) {
         return res.render (`product_add`)

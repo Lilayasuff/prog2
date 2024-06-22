@@ -25,12 +25,12 @@
 					<section class="product-box">
 						<a href="./product">
 							<figure class="product-box_image">
-								<img src="<%=productos[i].imagen %>" alt="Adidas forum mid">
+								<img src="/images/products/<%=Products[i].imagen%>" alt="<%=Products[i].producto%>">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= productos[i].producto %></h2>
-								<p>Descripcion: <%= productos[i].descripcion %></p>
-								<p>Comentarios: <%= productos[i].comentarios.length%> </p>
+								<h2><%= Products[i].producto %></h2>
+								<p>Descripcion: <%= Products[i].descripcion %></p>
+								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
 							</article>
 						</a>
 					</section>
@@ -52,12 +52,12 @@
 					<section class="product-box">
 						<a href="./product">
 							<figure class="product-box_image">
-								<img src="<%=productos[i].imagen %>" alt="Adidas forum mid">
+								<img src="/images/products/<%=Products[i].imagen%>" alt="<%=Products[i].producto%>">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= productos[i].producto %></h2>
-								<p>Descripcion: <%= productos[i].descripcion %></p>
-								<p>Comentarios: <%= productos[i].comentarios.length%> </p>
+								<h2><%= Products[i].producto %></h2>
+								<p>Descripcion: <%= Products[i].descripcion %></p>
+								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
 							</article>
 						</a>
 					</section>
