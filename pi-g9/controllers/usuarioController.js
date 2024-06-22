@@ -2,13 +2,18 @@ const bcrypt = require("bcryptjs");
 const base = require('../db/moduloDatos');
 const db = require ('../database/models');
 const { validationResult } = require("express-validator");
+const { Association } = require("sequelize");
 const Op = db.Sequelize.Op;
 
 
 
 const controller = {
     index: function (req,res){
-        db.Products.findAll()
+        db.Products.findAll({
+            include:[
+                {association: "Users"}
+            ]
+        })
         .then(function(productos){
             res.render("index",{Products: productos})
         })

@@ -30,7 +30,8 @@
 							<article class="product-box_data">
 								<h2><%= Products[i].producto %></h2>
 								<p>Descripcion: <%= Products[i].descripcion %></p>
-								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
+								<p>Usuario: <a href="/profile/<%= Products[i].usuarios_id %>"><%= Products[i].Users.email %></a></p>
+								
 							</article>
 						</a>
 					</section>
@@ -57,7 +58,8 @@
 							<article class="product-box_data">
 								<h2><%= Products[i].producto %></h2>
 								<p>Descripcion: <%= Products[i].descripcion %></p>
-								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
+								<p>Usuario: <a href="/profile/<%= Products[i].usuarios_id %>"><%= Products[i].Users.email %></a></p>
+								
 							</article>
 						</a>
 					</section>
