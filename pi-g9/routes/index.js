@@ -13,14 +13,10 @@ router.post('/logout', controller.logout)
 router.get('/login', controller.login.limpio);
 router.post('/login',validacionLo, controller.login.info);
 
-router.get('/profile_edit', controller.profile_edit);
-router.get('/profile', controller.profile);
-router.get('/product_add', controller.product_add);
 
 router.get('/register', controller.register.limpio);
 router.post('/register', validacionRe, controller.register.info);
 
-router.get('/product', controllerP.product);
 
 router.get('/search_results', controllerP.search_results);
 

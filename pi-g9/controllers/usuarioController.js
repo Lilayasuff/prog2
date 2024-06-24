@@ -8,9 +8,12 @@ const Op = db.Sequelize.Op;
 
 const controller = {
     index: function (req,res){
-        db.Products.findAll()
+        let relacion = {
+            include: [{association: "Users"}]
+        } 
+        db.Products.findAll(relacion)
         .then(function(productos){
-            res.render("index",{Products: productos})
+            res.render("index",{Products: productos, usuario: productos.Users})
         })
         .catch(function(err){
             console.log(err);
@@ -58,8 +61,21 @@ const controller = {
     profile_edit : function (req,res){
         return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
     },
-    profile: function(req,res){
-        res.render('profile', { productos: base.productos , usuarios: base.usuarios});
+    profile: function(req,res){ 
+        /*queremos al puto usuario lo que queremos hacer es traer los productos que el usuario agrego a su perfil de manera descendente*/  
+        let relacion = {
+            include: [{association: "products", order:[["created_at", "DESC"]], include: [{association: "Comments"}]}]
+        }
+        db.Users.findByPk(req.params.id, relacion)
+        .then( function ( user ) {
+               console.log(user);
+        res.render('profile', { productos: user.products , usuario: user});
+                          
+            })
+                .catch( function(e) {
+                    console.log(e)
+            })
+        
          
     },
     product_add: function (req, res) {

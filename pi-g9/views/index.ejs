@@ -30,7 +30,7 @@
 							<article class="product-box_data">
 								<h2><%= Products[i].producto %></h2>
 								<p>Descripcion: <%= Products[i].descripcion %></p>
-								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
+								<a href="/users/profile/<%=Products[i].usuarios_id%>"><%=Products[i].usuario.email%></a>
 							</article>
 						</a>
 					</section>
@@ -46,7 +46,7 @@
 			
 	<div class="container products-wrapper">
 		<div class="row">
-			<% for( let i = 6; i < 10; i++ ) { %>
+			<% for( let i = 6; i < Products.length; i++ ) { %>
 			
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
@@ -57,7 +57,7 @@
 							<article class="product-box_data">
 								<h2><%= Products[i].producto %></h2>
 								<p>Descripcion: <%= Products[i].descripcion %></p>
-								<a href="/profile/<%=Products[i].usuarios_id%>"><%=Users[i].name%></a>
+								<a href="/users/profile/<%=Products[i].usuarios_id%>"><%=Products[i].usuario.email%></a>
 							</article>
 						</a>
 					</section>
