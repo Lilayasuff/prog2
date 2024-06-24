@@ -67,9 +67,7 @@ const controller = {
         res.render('profile', { productos: base.productos , usuarios: base.usuarios});
          
     },
-    product_add: function (req, res) {
-        return res.render (`product_add`)
-    },
+
     register: {
         limpio: function (req, res) {
             if(req.session.user != undefined){

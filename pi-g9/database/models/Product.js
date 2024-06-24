@@ -4,25 +4,25 @@ module.exports = function (sequelize, dataTypes) {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
         },
         imagen:{
-            type: dataTypes.STRING 
+            type: dataTypes.STRING,
 
         },
         producto: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
         },
         descripcion:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
 
         },
         usuarios_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
         },
         
        
-    }
+    };
     const config = {
         tableName: "productos",
         timestamps: true,

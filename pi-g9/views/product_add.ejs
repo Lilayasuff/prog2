@@ -10,20 +10,33 @@
 			<div class="col-12">
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <form action="" method="get">
-				<input type="file" name="imagen" id="imagen">
+
+			<form action="/product_add" method="POST", novalidate>
+				<input type="text" id="text" name="imagen"  placeholder="(imagen)" required value="<%= locals.oldData && oldData.imagen ? oldData.imagen : null %>">
+				<% if (locals.errors && errors.imagen) { %>
+					<div class="error">
+						<%= errors.imagen.msg %>                                
+					</div>                            
+				<% } %>     
 				<br>
 				<br>
-				<label for="producto">Producto:</label>
-				<input type="text" name="producto" id="producto">
+				<input type="text" name="producto" id="producto" placeholder="Nombre del producto" required value="<%= locals.oldData && oldData.producto ? oldData.producto : null %>">
+				<% if (locals.errors && errors.producto) { %>
+					<div class="error">
+						<%= errors.producto.msg %>                                
+					</div>                            
+				<% } %>      
 				<br>
 				<br>
-				<label for="descripcion">Descripción: </label>
-				<input type="text" name="descripcion" id="descripcion">
-				<br>
-				<button type="submit" class="btn mt-3 ml-4" >AGREGAR</button>
-			</form>
+				<input type="text" id="descripcion" name="descripcion" placeholder="Descripcion del producto" required value="<%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %>">
+				<% if (locals.errors && errors.descripcion) { %>
+					<div class="error">
+						<%= errors.descripcion.msg %>                                
+					</div>                            
+				<% } %>    
+				
+				<button type="submit" class="btn mt-3 ml-4" >AGREGAR PRODUCTO</button>
+			</form> 
 			</h2>
 
 
