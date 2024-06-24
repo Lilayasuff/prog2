@@ -64,7 +64,14 @@ const controller = {
             }},
     
     profile_edit : function (req,res){
-        return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
+        db.Users.findByPk(req.params.id)
+        .then(function (user_edit){
+
+            return res.render('profile_edit',{ usuarios: user_edit})
+        })
+        .catch( function(e) {
+            console.log(e)
+    })
     },
     profile: function(req,res){ 
         let relacion = {
