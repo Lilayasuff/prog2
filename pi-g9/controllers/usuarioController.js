@@ -2,16 +2,18 @@ const bcrypt = require("bcryptjs");
 const base = require('../db/moduloDatos');
 const db = require ('../database/models');
 const { validationResult } = require("express-validator");
+const { Association } = require("sequelize");
 const Op = db.Sequelize.Op;
 
 
 
 const controller = {
     index: function (req,res){
-        let relacion = {
-            include: [{association: "Users"}]
-        } 
-        db.Products.findAll(relacion)
+        db.Products.findAll({
+            include:[
+                {association: "Users"}
+            ]
+        })
         .then(function(productos){
             res.render("index",{Products: productos, usuario: productos.Users})
         })
@@ -62,7 +64,6 @@ const controller = {
         return res.render('profile_edit',{ productos: base.productos , usuarios: base.usuarios})
     },
     profile: function(req,res){ 
-        /*queremos al puto usuario lo que queremos hacer es traer los productos que el usuario agrego a su perfil de manera descendente*/  
         let relacion = {
             include: [{association: "products", order:[["created_at", "DESC"]], include: [{association: "Comments"}]}]
         }
