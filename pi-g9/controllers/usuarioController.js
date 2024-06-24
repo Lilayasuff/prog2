@@ -10,13 +10,10 @@ const Op = db.Sequelize.Op;
 const controller = {
     index: function (req,res){
         db.Products.findAll({
+            order: [["createdAt", "DESC"]],
             include:[
                 {association: "Users",
-                order: [["created_at", "DESC"]]
-            }
-
-            ]
-        })
+                }]})
         .then(function(productos){
             res.render("index",{Products: productos, usuario: productos.Users})
         })
@@ -105,11 +102,16 @@ const controller = {
             email: req.body.email,
             name: req.body.name,
             password: bcrypt.hashSync(req.body.password), 
-            fecha: req.body.fecha,
-            dni: req.body.dni,
-            foto: req.body.foto,
-
-        };
+         };
+        if (req.body.fecha) {
+            user.fecha = req.body.fecha;
+        }
+        if (req.body.dni) {
+            user.dni = req.body.dni;
+        }
+        if (req.body.foto) {
+            user.foto = req.body.foto;
+        }
         db.Users
             .create(user)
             .then(function (user) {

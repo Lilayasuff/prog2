@@ -38,14 +38,14 @@ app.use(function(req, res, next){
   if(req.cookies.userId != undefined && req.session.user == undefined){
     let idDeLaCookie = req.cookies.userId;
     db.Users.findByPk(idDeLaCookie)
-    .then( user => {
+    .then(function(user) {
       req.session.user = user; 
       res.locals.user = user; 
       return next();
     })
     .catch( e => {console.log(e)})
   } else {
-    //Si no tengo cookie quiero que el programa continue
+    
     return next();
   }
 })
