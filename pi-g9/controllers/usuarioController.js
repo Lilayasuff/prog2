@@ -11,7 +11,10 @@ const controller = {
     index: function (req,res){
         db.Products.findAll({
             include:[
-                {association: "Users"}
+                {association: "Users",
+                order: [["created_at", "DESC"]]
+            }
+
             ]
         })
         .then(function(productos){
@@ -65,7 +68,7 @@ const controller = {
     },
     profile: function(req,res){ 
         let relacion = {
-            include: [{association: "products", order:[["created_at", "DESC"]], include: [{association: "Comments"}]}]
+            include: [{association: "products", order:[["createdAt", "ASC"]], include: [{association: "Comments"}]}]
         }
         db.Users.findByPk(req.params.id, relacion)
         .then( function ( user ) {
