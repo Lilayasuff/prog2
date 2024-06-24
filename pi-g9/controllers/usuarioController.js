@@ -13,7 +13,8 @@ const controller = {
             order: [["createdAt", "DESC"]],
             include:[
                 {association: "Users",
-                }]})
+                
+}]})
         .then(function(productos){
             res.render("index",{Products: productos, usuario: productos.Users})
         })
