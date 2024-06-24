@@ -82,9 +82,7 @@ const controller = {
         
          
     },
-    product_add: function (req, res) {
-        return res.render (`product_add`)
-    },
+
     register: {
         limpio: function (req, res) {
             if(req.session.user != undefined){
