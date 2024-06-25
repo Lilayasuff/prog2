@@ -67,7 +67,7 @@ const controller = {
         db.Users.findByPk(req.params.id)
         .then(function (user_edit){
 
-            return res.render('profile_edit',{ usuarios: user_edit})
+            return res.render('profile_edit',{ usuario: user_edit})
         })
         .catch( function(e) {
             console.log(e)

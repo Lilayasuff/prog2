@@ -12,29 +12,44 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
-				<form action="" method="get">
+				<form action="/users/profile/:id" method="post">
 					<label for="">Email: </label>
-					<input type="email" name="email" required >
+					<input type="email" name="email" required  value="<%= locals.oldData && oldData.email ? oldData.email : null %>" >
+					<% if (locals.errors && errors.email) { %>
+						<div class="error">
+							<%= errors.email.msg %>                                
+						</div>                            
+					<% } %>    
 					<br>
 					<br>
 					<label for="">Usuario: </label>
-					<input type="text" name="usuario" required>
+					<input type="name" name="name" required  value="<%= locals.oldData && oldData.name ? oldData.name : null %>" >
+					<% if (locals.errors && errors.name) { %>
+						<div class="error">
+							<%= errors.name.msg %>                                
+						</div>                            
+					<% } %>    
 					<br>
 					<br>
 					<label for="">Contraseña: </label>
-					<input type="password" name="contrasenia" required>
+					<input type="password" name="password" required>
+					<% if (locals.errors && errors.password) { %>
+						<div class="error">
+							<%= errors.password.msg %>                                
+						</div>                            
+					<% } %>    
 					<br>
 					<br>
 					<label for="">Fecha de nacimiento: </label>
-					<input type="date" name="fecha" required>
+					<input type="date" name="fecha" required value="<%= locals.oldData && oldData.fecha ? oldData.fecha : null %>">
 					<br>
 					<br>
 					<label for="">Numero de documento: </label>
-					<input type="number" name="dni" required>
-					<br>
+					<input type="number" name="dni" required value="<%= locals.oldData && oldData.dni ? oldData.dni : null %>">
+					<br> 
 					<br>
 					<label for="">Foto de perfil: </label>
-					<input type="text" name="foto" id="">
+					<input type="text" name="foto" value="<%= locals.oldData && oldData.foto ? oldData.foto : null %>">
 					<br>
 					<button type="submit" class="btn mt-3 ml-4" >EDITAR</button>
 				</form>
