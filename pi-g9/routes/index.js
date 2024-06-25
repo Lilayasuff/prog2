@@ -13,6 +13,7 @@ router.post('/logout', controller.logout)
 
 router.get('/login', controller.login.limpio);
 router.post('/login',validacionLo, controller.login.info);
+
 router.get('/product', controllerP.product);
 
 router.get('/register', controller.register.limpio);
