@@ -71,6 +71,32 @@ const controller = {
             console.log(e)
     })
     },
+    update: function(req,res){
+        console.log(req.params.id);
+        let id = req.params.id
+        let data = {
+            email:req.body.email,
+            name:req.body.name,
+            password:bcrypt.hashSync(req.body.password),
+            fecha:req.body.fecha,
+            dni:req.body.dni,
+            foto:req.body.foto,
+        }
+        db.Users.update(data, {
+            where: {
+                id: id
+            }
+        })
+        .then(function (user_edit){
+            console.log(user_edit);
+
+            return res.redirect(`/users/profile/${id}`)
+        })
+        .catch( function(e) {
+            console.log(e)
+    })
+
+    },
     profile: function(req,res){ 
         let relacion = {
             include: [{association: "products", order:[["createdAt", "ASC"]], include: [{association: "Comments"}]}]
