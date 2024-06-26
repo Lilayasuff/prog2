@@ -14,16 +14,16 @@ router.post('/logout', controller.logout)
 router.get('/login', controller.login.limpio);
 router.post('/login',validacionLo, controller.login.info);
 
-router.get('/product', controllerP.product);
+
+
 
 router.get('/register', controller.register.limpio);
 router.post('/register', validacionRe, controller.register.info);
 
-
 router.get('/search_results', controllerP.search_results)
 router.get('/product_add', controllerP.product_add.index)
 router.post('/product_add', addProductValidation,controllerP.product_add.guardar)
-
-
+router.get('/product/:id', controllerP.product);
+router.post('/delete_product/:id', controllerP.delete_product);
 
 module.exports = router;

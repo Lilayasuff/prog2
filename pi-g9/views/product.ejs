@@ -5,23 +5,24 @@
 <% } %>%>
 
 
+
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<% for( let i = 0; i < 1; i++ ) { %>
-			<h2 class="products-title"> <%= productos[i].producto %></h2> 
+			<h2 class="products-title"> <%= product.producto %></h2> 
 			<p class="product-detail-description">
 				<a href="./product_add">Editar</a>
 			</p>
+			<form action="/delete_product/<%= product.id %>" method="POST">
+				<button type="submit" class="delete-button">Borrar Producto</button>
+			</form>
 		</div>
 		
 			<div class="product-detail">
 				<div class="row">
 					<article class="col-12 col-lg-8 product-detail-info">
-						<img src="<%=productos[i].imagen %>" alt="" class="product-detail-img">
-						<p class="product-detail-description">
-							<%=productos[i].descripcion %>
-						</p>
+						<img src="<%=product.imagen %>" alt="<%= product.producto %>" class="product-detail-img">
+						<p class="product-detail-description"><%=product.descripcion %></p>
 					</article>
 					
 					<div class="col-12 col-lg-4">
@@ -29,11 +30,11 @@
 					<% for( let i = 0; i < 3; i++ ) { %>
 							<section class="comments">
 								<article>
-									<img src=" <%=productos[0].comentarios[i].imagen %>" alt="">
+									<img src=" <%=product.Comments[i].imagen %>" alt="">
 									<div class="data">
 										<p class="user">
-										<strong> <a href="./profile">Nombre usuario: <%=productos[0].comentarios[i].nombreusuario %></a> </strong>
-										<%=productos[0].comentarios[i].descripcion %></p>
+										<strong> <a href="./profile">Nombre usuario: <%=product.Comments[i].nombreusuario %></a> </strong>
+										<%=product.Comments[i].descripcion %></p>
 									</div>
 								</article>
 							</section>
@@ -53,7 +54,7 @@
 		</div>
 			
 			
-		<% } %>
+		
 		
 	<!-- /product detail -->
 

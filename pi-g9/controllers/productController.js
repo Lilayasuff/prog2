@@ -1,14 +1,39 @@
 
 const base = require('../db/moduloDatos');
-const db = require ('../database/models')
+const db = require('../database/models')
 const {validationResult} = require('express-validator')
 const Op = db.Sequelize.Op;
+const { where } = require("sequelize");
 
 
 const controllerP = {
-    product: function (req,res) {
-        return res.render (`products`, { productos: base.productos,usuarios: base.usuarios})
-    },
+    product: function (req, res) {
+        const id = req.params.id;
+        db.Products.findByPk(id, {
+            order: [['createdAt', 'DESC']],
+            include: [
+                { association: "Users" },
+                {
+                    association: "Comments",
+                    separate: true,
+                    order: [['createdAt', 'DESC']],
+                    include: { association: "users" }
+                }
+            ]
+        })
+        .then((product) => {
+            if (!product){
+                return res.redirect('/')
+            }
+            let lista_comentarios = product.comments;
+            
+            return res.render('product', { product, lista_comentarios });
+        })
+        .catch((error) => {
+            console.error(error);
+            res.status(500).send('Internal Server Error');
+        });
+    }, 
     search_results: function(req,res){     
       
        const busca = req.query.search;
@@ -75,9 +100,33 @@ const controllerP = {
                     console.log("Error al guardar el ", err);
                 });
         }
+    },
+
+    delete_product: function (req, res) {
+        let id = req.params.id;
+        db.Products.findByPk(id, {
+            include: {association: "Users"}
+        })
+            .then (function(){               
+                    db.Comments.destroy({
+                        where: { productos_id: id }
+                    })
+                    .then(() => {
+                         db.Products.destroy({
+                            where: { id: id }
+                        });
+                    })
+                    .then(() => {
+                        return res.redirect('/');
+                    })
+                    .catch( function(e) {
+                        console.log(e)
+                }) 
+                
+                
+            })
+
     }
-
-
 
 };
 
